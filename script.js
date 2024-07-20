@@ -15,16 +15,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const newTask = document.createElement('li');
         newTask.textContent = taskText;
 
+        // Create a new button for removing the task
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.className = 'remove-btn';
+        removeButton.className = 'remove-btn'; // Setting class using className
+
+        // Set onclick event to remove the task
         removeButton.onclick = function() {
             taskList.removeChild(newTask);
         };
 
+        // Append the remove button to the task
         newTask.appendChild(removeButton);
         taskList.appendChild(newTask);
 
+        // Clear the task input field
         taskInput.value = '';
     }
 
